@@ -4,7 +4,8 @@
     position: relative;
     width: 100%;
     height: 1px;
-    background-color: var(--border-dark);
+    /* Modo claro - linha clara sem glow */
+    background-color: var(--border-light);
 }
 
 .highlight-line::after {
@@ -17,14 +18,7 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
     filter: blur(4px);
-}
-
-/* Modo claro - quando não tem a classe dark */
-.highlight-line {
-    background-color: var(--border-light);
-}
-
-.highlight-line::after {
+    /* Modo claro - sem glow */
     display: none;
 }
 
