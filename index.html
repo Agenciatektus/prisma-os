@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="pt-br" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crystal OS: Previsibilidade e Escala para sua Agência</title>
+    
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Crystal OS: Sistema operacional completo no Notion para organizar sua agência digital. Gerencie clientes, projetos, tarefas e finanças com método visual e prático.">
+    <meta name="keywords" content="agência digital, gestão de projetos, Notion, organização, produtividade, Crystal OS">
+    <meta name="author" content="Tektus">
+    <meta name="robots" content="index, follow">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://tektus.github.io/crystal-os/">
+    <meta property="og:title" content="Crystal OS: Previsibilidade e Escala para sua Agência">
+    <meta property="og:description" content="Sistema operacional completo no Notion para organizar sua agência digital. Gerencie clientes, projetos, tarefas e finanças.">
+    <meta property="og:image" content="https://tektus.github.io/crystal-os/assets/og-image.jpg">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://tektus.github.io/crystal-os/">
+    <meta property="twitter:title" content="Crystal OS: Previsibilidade e Escala para sua Agência">
+    <meta property="twitter:description" content="Sistema operacional completo no Notion para organizar sua agência digital.">
+    <meta property="twitter:image" content="https://tektus.github.io/crystal-os/assets/og-image.jpg">
+
+    <!-- Preload Critical Resources -->
+    <link rel="preload" href="https://cdn.tailwindcss.com" as="script">
+    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" as="style">
+    <link rel="preload" href="https://unpkg.com/lucide@latest" as="script">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;900&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Critical CSS -->
+    <link rel="stylesheet" href="assets/css/critical.css">
+    
+    <!-- Non-critical CSS -->
+    <link rel="stylesheet" href="assets/css/styles.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="assets/css/styles.css"></noscript>
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Crystal OS",
+        "description": "Sistema operacional completo no Notion para organizar agências digitais",
+        "applicationCategory": "BusinessApplication",
+        "operatingSystem": "Web",
+        "offers": {
+            "@type": "Offer",
+            "price": "497.00",
+            "priceCurrency": "BRL",
+            "availability": "https://schema.org/InStock"
+        },
+        "provider": {
+            "@type": "Organization",
+            "name": "Tektus"
+        }
+    }
+    </script>
+
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        'brand-dark': '#0A0A0A',
+                        'brand-light': '#f5f5f5',
+                        'brand-text-dark': '#1a1a1a',
+                        'brand-text-light': '#f5f5f5',
+                        'brand-orange': '#ff6a00',
+                        'brand-orange-dark': '#e55800',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="antialiased">
+    <div class="glow-container">
+        <div class="glow glow-1"></div>
+        <div class="glow glow-2"></div>
+        <div class="glow glow-3"></div>
+    </div>
+    
+    <!-- Header -->
+    <header class="fixed top-0 left-0 right-0 z-50">
+        <div class="container mx-auto px-6 py-4">
+            <div class="flex justify-between items-center glass-card header-glass p-4 px-6 md:px-8">
+                <a href="#" class="text-2xl font-bold switchable-text">Crystal OS</a>
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#solucao" class="switchable-text hover:text-brand-orange transition-colors">A Solução</a>
+                    <a href="#tour" class="switchable-text hover:text-brand-orange transition-colors">Features</a>
+                    <a href="#oferta" class="switchable-text hover:text-brand-orange transition-colors">Oferta</a>
+                </nav>
+                <div class="flex items-center space-x-4">
+                     <a href="#oferta" class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold py-2 px-4 rounded-full transition-colors text-sm md:text-base">
+                        ORGANIZAR MINHA AGÊNCIA
+                    </a>
+                    <button id="theme-toggle" class="p-2 rounded-full switchable-text hover:bg-black/10 dark:hover:bg-white/10 transition-colors">
+                        <i data-lucide="sun" class="block dark:hidden"></i>
+                        <i data-lucide="moon" class="hidden dark:block"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="relative">
+        <!-- Sessão 1: A Promessa -->
+        <section id="hero" class="relative min-h-screen flex items-center justify-center text-center overflow-hidden pt-24">
+            <div class="relative z-10 container mx-auto px-6 section-fade-in">
+                
+                <h1 class="text-4xl md:text-6xl lg:text-7xl font-black uppercase tracking-tight leading-tight">
+                    Deixe de ser o gargalo da sua própria agência.
+                </h1>
+                <p class="mt-6 max-w-3xl mx-auto text-lg md:text-xl text-gray-700 dark:text-brand-text-light/80">
+                    O Crystal OS é o sistema operacional completo no Notion que te devolve o controle, organiza seus processos e libera seu tempo para focar no que realmente importa: crescer.
+                </p>
+                <div class="mt-10">
+                    <a href="#oferta" class="bg-brand-orange hover:bg-brand-orange-dark text-white font-bold py-4 px-10 rounded-lg text-xl transition-transform transform hover:scale-105 shadow-lg shadow-brand-orange/30">
+                        QUERO ORGANIZAR MINHA AGÊNCIA
+                    </a>
+                    <p class="mt-6 text-lg tracking-widest font-semibold text-gray-500 dark:text-brand-text-light/70">Performance. Clareza. Lucratividade.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sessão 2: O Fim do Caos -->
+        <section id="solucao" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 text-center section-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold">Se você se identifica com isso, você está no lugar certo.</h2>
+                <div class="highlight-line my-8"></div>
+                <div class="mt-8 max-w-2xl mx-auto text-left space-y-4">
+                    <div class="glass-card p-5 flex items-center">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4 flex-shrink-0"></i>
+                        <span class="text-lg">Usa 5 ferramentas diferentes e sente que nada se conecta?</span>
+                    </div>
+                    <div class="glass-card p-5 flex items-center">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4 flex-shrink-0"></i>
+                        <span class="text-lg">Perde prazos ou se esquece de tarefas porque tudo está espalhado?</span>
+                    </div>
+                    <div class="glass-card p-5 flex items-center">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4 flex-shrink-0"></i>
+                        <span class="text-lg">Não tem certeza de quanto lucrou no mês passado?</span>
+                    </div>
+                    <div class="glass-card p-5 flex items-center">
+                        <i data-lucide="check-circle-2" class="w-6 h-6 text-green-500 mr-4 flex-shrink-0"></i>
+                        <span class="text-lg">Sente que a desorganização te impede de aceitar novos clientes?</span>
+                    </div>
+                </div>
+                <p class="mt-12 max-w-3xl mx-auto text-xl text-brand-text-dark/80 dark:text-brand-text-light/80">
+                   Chega de apagar incêndios. O Crystal OS centraliza toda a sua operação em um único lugar. Gerencie clientes, projetos, tarefas e finanças com um método visual, prático e ágil, construído para a realidade de agências como a sua.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sessão 3: Tour reestruturado -->
+        <section id="tour" class="py-20 md:py-24 space-y-24">
+            
+            <!-- Feature 1: Central de Clientes -->
+            <div class="container mx-auto px-6 section-fade-in">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left">
+                        <i data-lucide="users" class="w-12 h-12 text-brand-orange mb-4"></i>
+                        <h3 class="text-3xl font-bold">Central de Clientes Inteligente</h3>
+                        <p class="mt-4 text-lg text-brand-text-dark/80 dark:text-brand-text-light/80">Visão 360° de cada cliente, com portais exclusivos e profissionais para acompanhar projetos, acessar arquivos e centralizar a comunicação.</p>
+                    </div>
+                    <div class="glass-card p-4">
+                        <img src="assets/images/clientes.jpg" alt="Mockup da Central de Clientes" class="rounded-xl w-full h-auto object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 2: Gestão de Tarefas -->
+            <div class="container mx-auto px-6 section-fade-in">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="glass-card p-4 md:order-first">
+                        <img src="assets/images/tarefas.jpg" alt="Mockup da Gestão de Tarefas" class="rounded-xl w-full h-auto object-cover" loading="lazy">
+                    </div>
+                    <div class="text-left md:order-last">
+                        <i data-lucide="list-checks" class="w-12 h-12 text-brand-orange mb-4"></i>
+                        <h3 class="text-3xl font-bold">Gestão de Tarefas Sem Esforço</h3>
+                        <p class="mt-4 text-lg text-brand-text-dark/80 dark:text-brand-text-light/80">Saiba exatamente o que precisa ser feito, por quem e para quando. Visualize suas prioridades em um pipeline claro e nunca mais perca um prazo.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature 3: Financeiro -->
+            <div class="container mx-auto px-6 section-fade-in">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="text-left">
+                        <i data-lucide="dollar-sign" class="w-12 h-12 text-brand-orange mb-4"></i>
+                        <h3 class="text-3xl font-bold">Financeiro Descomplicado</h3>
+                        <p class="mt-4 text-lg text-brand-text-dark/80 dark:text-brand-text-light/80">Tenha clareza total sobre suas entradas, saídas e o que precisa ser cobrado. Tome decisões baseadas em dados, não em achismo.</p>
+                    </div>
+                    <div class="glass-card p-4">
+                        <img src="assets/images/financeiro.jpg" alt="Mockup do Financeiro" class="rounded-xl w-full h-auto object-cover" loading="lazy">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Feature 4: ADM Essencial -->
+             <div class="container mx-auto px-6 section-fade-in">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div class="glass-card p-4 md:order-first">
+                        <img src="assets/images/contratos.jpg" alt="Mockup de Documentos ADM" class="rounded-xl w-full h-auto object-cover" loading="lazy">
+                    </div>
+                    <div class="text-left md:order-last">
+                        <i data-lucide="shield-check" class="w-12 h-12 text-brand-orange mb-4"></i>
+                        <h3 class="text-3xl font-bold">ADM Essencial</h3>
+                        <p class="mt-4 text-lg text-brand-text-dark/80 dark:text-brand-text-light/80">Acesso a um kit de documentos profissionais, como modelos de contrato e proposta, para operar com mais segurança desde o primeiro dia.</p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <!-- Bônus -->
+        <section id="bonus" class="py-20 md:py-24">
+            <div class="container mx-auto px-6 section-fade-in">
+                <div class="text-center mb-8">
+                    <h2 class="text-3xl md:text-4xl font-bold">Ao adquirir o Crystal OS hoje, você também leva acesso a um ecossistema completo:</h2>
+                </div>
+                 <div class="highlight-line mb-16"></div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="glass-card p-8 text-center">
+                        <p class="font-bold text-brand-orange text-sm">BÔNUS 1</p>
+                        <h3 class="text-2xl font-bold mt-2">Workshop "Do Zero ao Controle"</h3>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">Um treinamento rápido para você dominar o sistema, mesmo que nunca tenha usado o Notion antes.</p>
+                    </div>
+                    <div class="glass-card p-8 text-center">
+                        <p class="font-bold text-brand-orange text-sm">BÔNUS 2</p>
+                        <h3 class="text-2xl font-bold mt-2">Comunidade de Gestores</h3>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">Acesso exclusivo para trocar experiências, fazer networking e tirar dúvidas com outros donos de agência.</p>
+                    </div>
+                    <div class="glass-card p-8 text-center">
+                        <p class="font-bold text-brand-orange text-sm">BÔNUS 3</p>
+                        <h3 class="text-2xl font-bold mt-2">Sessão de Implementação ao Vivo</h3>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">Um encontro em grupo ao vivo para configurarmos juntos os primeiros passos do seu sistema.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- O Investimento -->
+        <section id="oferta" class="py-20 md:py-32">
+             <div class="container mx-auto px-6 section-fade-in text-center">
+                <div class="max-w-3xl mx-auto">
+                    <div class="glass-card p-8 md:p-12">
+                        <h2 class="text-3xl md:text-5xl font-black">Chega de pagar "o preço" da desorganização.</h2>
+                        <p class="mt-6 text-lg text-brand-text-dark/70 dark:text-brand-text-light/70">
+                            Centenas de horas foram investidas para criar e refinar este sistema para que você não precise fazer isso. Tenha acesso imediato à organização que você precisa para escalar.
+                        </p>
+
+                        <div class="mt-8 text-center border-t border-black/10 dark:border-white/10 pt-8">
+                             <p class="text-xl font-bold">Crystal OS + Todos os Bônus</p>
+                             <p class="text-5xl font-bold mt-4">12x de <span class="text-brand-orange">R$ 49,70</span></p>
+                             <p class="text-lg mt-1">ou R$ 497 à vista</p>
+                        </div>
+                         <div class="mt-10">
+                            <a href="#" class="w-full block bg-brand-orange hover:bg-brand-orange-dark text-white font-bold py-5 px-12 rounded-lg text-2xl transition-transform transform hover:scale-105 shadow-lg shadow-brand-orange/30">
+                                QUERO MEU ACESSO IMEDIATO
+                            </a>
+                            <p class="mt-4 text-sm text-brand-text-dark/60 dark:text-brand-text-light/60">Compra 100% segura | Acesso vitalício ao sistema | 1 ano de atualizações</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="py-20 md:py-32">
+            <div class="container mx-auto px-6 max-w-4xl section-fade-in">
+                <h2 class="text-3xl md:text-4xl font-bold text-center">Perguntas Frequentes</h2>
+                 <div class="highlight-line my-8"></div>
+                <div class="mt-8 space-y-6">
+                    <details class="glass-card p-6 cursor-pointer">
+                        <summary class="font-semibold text-lg list-none flex justify-between items-center">
+                            Preciso pagar pelo Notion para usar?
+                            <i data-lucide="chevron-down" class="transition-transform duration-300"></i>
+                        </summary>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">Não, o plano gratuito do Notion é suficiente para usar 100% do Crystal OS.</p>
+                    </details>
+                    <details class="glass-card p-6 cursor-pointer">
+                        <summary class="font-semibold text-lg list-none flex justify-between items-center">
+                            Sou iniciante no Notion, vou conseguir usar?
+                             <i data-lucide="chevron-down" class="transition-transform duration-300"></i>
+                        </summary>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">Sim, o bônus do workshop "Do Zero ao Controle" é exatamente para isso. Ele te guiará passo a passo.</p>
+                    </details>
+                     <details class="glass-card p-6 cursor-pointer">
+                        <summary class="font-semibold text-lg list-none flex justify-between items-center">
+                            Já tenho alguns clientes, isso funciona para mim?
+                             <i data-lucide="chevron-down" class="transition-transform duration-300"></i>
+                        </summary>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">Sim, o sistema foi desenhado para quem precisa organizar a operação atual para poder crescer com segurança e sem caos.</p>
+                    </details>
+                    <details class="glass-card p-6 cursor-pointer">
+                        <summary class="font-semibold text-lg list-none flex justify-between items-center">
+                            O acesso é por quanto tempo?
+                             <i data-lucide="chevron-down" class="transition-transform duration-300"></i>
+                        </summary>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">O sistema é seu para sempre (acesso vitalício). Você também tem direito a 1 ano de todas as atualizações e melhorias que fizermos.</p>
+                    </details>
+                    <details class="glass-card p-6 cursor-pointer">
+                        <summary class="font-semibold text-lg list-none flex justify-between items-center">
+                            E se eu tiver dúvidas?
+                             <i data-lucide="chevron-down" class="transition-transform duration-300"></i>
+                        </summary>
+                        <p class="mt-4 text-brand-text-dark/80 dark:text-brand-text-light/80">Você terá o suporte da nossa comunidade de gestores e poderá tirar dúvidas diretamente na sessão de implementação ao vivo.</p>
+                    </details>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-brand-text-light/60 py-12">
+        <div class="container mx-auto px-6 text-center border-t border-black/10 dark:border-white/10 pt-12">
+            <p class="font-bold text-lg switchable-text">Crystal OS by Tektus</p>
+            <p class="mt-4 text-sm text-brand-text-dark/70 dark:text-brand-text-light/70">Tektus Soluções Digitais LTDA | CNPJ: 00.000.000/0001-00</p>
+            <div class="mt-6 flex justify-center space-x-6">
+                <a href="#" class="text-brand-text-dark/70 dark:text-brand-text-light/70 hover:text-brand-orange dark:hover:text-brand-orange transition-colors">Termos de Uso</a>
+                <a href="#" class="text-brand-text-dark/70 dark:text-brand-text-light/70 hover:text-brand-orange dark:hover:text-brand-orange transition-colors">Privacidade</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="assets/js/main.js"></script>
+</body>
+</html> 

@@ -1,0 +1,115 @@
+/* CSS Não-Crítico - Carrega após o primeiro render */
+
+.highlight-line {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    background-color: var(--border-dark);
+}
+
+.highlight-line::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 30%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
+    filter: blur(4px);
+}
+
+.light .highlight-line {
+    background-color: var(--border-light);
+}
+
+.light .highlight-line::after {
+    display: none;
+}
+
+.section-fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+.section-fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Otimizações de performance */
+@media (prefers-reduced-motion: reduce) {
+    .section-fade-in {
+        transition: none;
+    }
+    
+    body {
+        transition: none;
+    }
+    
+    .glow-container {
+        transition: none;
+    }
+    
+    .glass-card {
+        transition: none;
+    }
+}
+
+/* Lazy loading para imagens */
+img[loading="lazy"] {
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+img[loading="lazy"].loaded {
+    opacity: 1;
+}
+
+/* Otimizações para mobile */
+@media (max-width: 768px) {
+    .glow-1, .glow-2, .glow-3 {
+        filter: blur(150px);
+    }
+    
+    .glass-card {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+    }
+}
+
+/* Melhorias de acessibilidade */
+@media (prefers-contrast: high) {
+    .glass-card {
+        border-width: 2px;
+    }
+    
+    .highlight-line::after {
+        filter: none;
+    }
+}
+
+/* Suporte para modo escuro automático */
+@media (prefers-color-scheme: dark) {
+    :root {
+        --bg-light: #0A0A0A;
+        --text-dark: #f5f5f5;
+    }
+}
+
+/* Animações otimizadas */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.section-fade-in.visible {
+    animation: fadeInUp 0.8s ease-out forwards;
+} 

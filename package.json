@@ -1,0 +1,26 @@
+{
+  "name": "crystal-os-landing",
+  "version": "1.0.0",
+  "description": "Landing page otimizada para Crystal OS",
+  "main": "index.html",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo 'Build completed - static files ready'",
+    "test": "echo 'No tests specified'",
+    "lint": "echo 'No linter configured'"
+  },
+  "keywords": [
+    "landing-page",
+    "performance",
+    "crystal-os",
+    "notion"
+  ],
+  "author": "Tektus",
+  "license": "MIT",
+  "devDependencies": {
+    "serve": "^14.2.0"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+} 
