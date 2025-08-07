@@ -4,8 +4,7 @@
     position: relative;
     width: 100%;
     height: 1px;
-    /* Modo claro - linha clara sem glow */
-    background-color: var(--border-light);
+    background-color: var(--border-dark);
 }
 
 .highlight-line::after {
@@ -18,17 +17,14 @@
     height: 100%;
     background: linear-gradient(90deg, transparent, var(--brand-orange), transparent);
     filter: blur(4px);
-    /* Modo claro - sem glow */
+}
+
+.light .highlight-line {
+    background-color: var(--border-light);
+}
+
+.light .highlight-line::after {
     display: none;
-}
-
-/* Modo escuro - quando tem a classe dark */
-.dark .highlight-line {
-    background-color: var(--border-dark);
-}
-
-.dark .highlight-line::after {
-    display: block;
 }
 
 .section-fade-in {
