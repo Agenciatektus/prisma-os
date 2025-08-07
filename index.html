@@ -341,32 +341,5 @@
 
     <!-- JavaScript -->
     <script src="assets/js/main.js"></script>
-    
-    <!-- Teste direto do tema -->
-    <script>
-        // Teste simples para verificar se o botão funciona
-        document.addEventListener('DOMContentLoaded', function() {
-            const testButton = document.getElementById('theme-toggle');
-            if (testButton) {
-                console.log('✅ Botão de tema encontrado!');
-                testButton.addEventListener('click', function() {
-                    console.log('🎯 Botão clicado!');
-                    const html = document.documentElement;
-                    const isDark = html.classList.contains('dark');
-                    console.log('Modo atual:', isDark ? 'ESCURO' : 'CLARO');
-                    
-                    if (isDark) {
-                        html.classList.remove('dark');
-                        console.log('➡️ Mudando para CLARO');
-                    } else {
-                        html.classList.add('dark');
-                        console.log('➡️ Mudando para ESCURO');
-                    }
-                });
-            } else {
-                console.error('❌ Botão de tema NÃO encontrado!');
-            }
-        });
-    </script>
 </body>
 </html> 
