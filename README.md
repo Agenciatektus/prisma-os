@@ -41,7 +41,7 @@ crystal-os/
 1. **Configure o repositório**:
    - Vá em Settings > Pages
    - Source: Deploy from a branch
-   - Branch: gh-pages
+   - Branch: main
    - Folder: / (root)
 
 2. **Push para main**:
@@ -52,6 +52,8 @@ crystal-os/
    ```
 
 3. **O GitHub Actions fará o deploy automaticamente**
+
+4. **URL da página**: https://agenciatektus.github.io/prisma-os/
 
 ## 📊 Métricas de Performance
 
@@ -88,10 +90,10 @@ crystal-os/
 
 ```bash
 # Clone o repositório
-git clone https://github.com/seu-usuario/crystal-os.git
+git clone https://github.com/Agenciatektus/prisma-os.git
 
 # Entre na pasta
-cd crystal-os
+cd prisma-os
 
 # Abra com servidor local
 python -m http.server 8000
