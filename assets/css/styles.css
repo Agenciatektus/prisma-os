@@ -19,12 +19,22 @@
     filter: blur(4px);
 }
 
-.light .highlight-line {
+/* Modo claro - quando não tem a classe dark */
+.highlight-line {
     background-color: var(--border-light);
 }
 
-.light .highlight-line::after {
+.highlight-line::after {
     display: none;
+}
+
+/* Modo escuro - quando tem a classe dark */
+.dark .highlight-line {
+    background-color: var(--border-dark);
+}
+
+.dark .highlight-line::after {
+    display: block;
 }
 
 .section-fade-in {

@@ -22,13 +22,15 @@ const setTema = (theme) => {
 
 // Event listener otimizado com debounce
 let themeToggleTimeout;
-themeToggle.addEventListener('click', () => {
-    clearTimeout(themeToggleTimeout);
-    themeToggleTimeout = setTimeout(() => {
-        const currentTheme = localStorage.getItem('theme') || 'dark';
-        setTema(currentTheme === 'dark' ? 'light' : 'dark');
-    }, 100);
-});
+if (themeToggle) {
+    themeToggle.addEventListener('click', () => {
+        clearTimeout(themeToggleTimeout);
+        themeToggleTimeout = setTimeout(() => {
+            const currentTheme = localStorage.getItem('theme') || 'dark';
+            setTema(currentTheme === 'dark' ? 'light' : 'dark');
+        }, 100);
+    });
+}
 
 // Inicialização do tema
 const initialTheme = localStorage.getItem('theme') || 
