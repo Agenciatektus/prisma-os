@@ -11,30 +11,40 @@ document.addEventListener('DOMContentLoaded', function() {
 const themeToggle = document.getElementById('theme-toggle');
 const htmlEl = document.documentElement;
 
+console.log('Theme toggle element:', themeToggle); // Debug
+
 const setTema = (theme) => {
+    console.log('Setting theme to:', theme); // Debug
     localStorage.setItem('theme', theme);
     if (theme === 'dark') {
         htmlEl.classList.add('dark');
     } else {
         htmlEl.classList.remove('dark');
     }
+    console.log('HTML classes:', htmlEl.classList.toString()); // Debug
 }
 
 // Event listener otimizado com debounce
 let themeToggleTimeout;
 if (themeToggle) {
+    console.log('Adding click listener to theme toggle'); // Debug
     themeToggle.addEventListener('click', () => {
+        console.log('Theme toggle clicked!'); // Debug
         clearTimeout(themeToggleTimeout);
         themeToggleTimeout = setTimeout(() => {
             const currentTheme = localStorage.getItem('theme') || 'dark';
-            setTema(currentTheme === 'dark' ? 'light' : 'dark');
+            console.log('Current theme from localStorage:', currentTheme); // Debug
+            const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+            setTema(newTheme);
         }, 100);
     });
+} else {
+    console.error('Theme toggle element not found!'); // Debug
 }
 
 // Inicialização do tema
-const initialTheme = localStorage.getItem('theme') || 
-    (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
+const initialTheme = localStorage.getItem('theme') || 'dark';
+console.log('Initial theme:', initialTheme); // Debug
 setTema(initialTheme);
 
 // Lógica para animação de fade-in das seções com Intersection Observer
